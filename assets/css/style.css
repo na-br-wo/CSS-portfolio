@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 12px;
+  color: black;
+  background-color: #e8eefd;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 1800px;
+  margin: 0 auto;
+  /* background-color: lightpink; */
+}
+
+/* typography */
+h1, h2, li, a {
+  color: rgb(198, 192, 186);
+  font-family: 'Roboto', sans-serif;
+}
+
+h3, h4, p {
+  font-family: 'Oxygen', sans-serif;
+}
+
+/* no text decoration for links */
+a {
+  text-decoration: none;
+}
+
+/* hero image layout */
+.hero-image {
+  margin-top: 0;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  background: url("../images/hero-image.png") no-repeat center;
+  background-size: cover;
+  margin-bottom: 10px;
+  filter: drop-shadow(4px 4px 5px #00000053);
+}
+
+/* || header layout */
+header {
+  margin-top: 0;
+  position: fixed;
+  top: -1px;
+  left: 0;
+  right: 0;
+  background-color: rgb(80, 74, 81, .89);
+  display: flex;
+  flex-direction: row;
+  padding: 10px 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  flex-shrink: 0.5;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 100;
+  padding-right: 8px;
+  border-right: 1px solid rgb(198, 192, 186);
+}
+
+header h2 {
+  font-weight: 100;
+  margin-left: 9px;
+}
+
+nav ul {
+  padding: 3px;
+  list-style-type: none;
+  flex: 1;
+  display: flex;
+}
+
+nav li {
+  padding: 9px;
+  font-weight: 400;
+}
+
+/* responsive design for header */
+@media (max-width: 750px) {
+  header h1 {
+    font-size: 1em;
+  }
+  header h2 {
+    font-size: .75em;
+  }
+  nav li {
+    font-size: .65em;
+  }
+}
+
+@media (min-width: 750.02px) and (max-width: 1000px) {
+  header h1 {
+    font-size: 2em;
+  }
+  header h2 {
+    font-size: 1.25em;
+  }
+  nav li {
+    font-size: .9em;
+  }
+}
+
+@media (min-width: 1000.02px) {
+  header h1 {
+    font-size: 2.25em;
+  }
+  header h2 {
+    font-size: 1.5em;
+  }
+  nav li {
+    font-size: 1.15em;
+  }
+}
+/* end header layout || */
+
+/* main section layout */
+main {
+  color: #6A626C;
+  padding: 10px 30px;
+}
+
+main h3 {
+  justify-self: end;
+  font-size: 2em;
+  padding-right: 12px;
+  border-right: 2px solid #6A626C;
+}
+
+#about-me, #my-work, #contact {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  margin-bottom: 10px;
+}
+
+.profile-picture {
+  width: 25%;
+  border-radius: 2px;
+}
+
+.about-me-desc {
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  align-items: center;
+}
+
+.about-me-desc p {
+  padding-left: 18px;
+  font-size: 1.2em;
+}
+
+#my-work{
+  background-color: lightblue;
+}
+
+#contact {
+  background-color: lightgray;
+}
+
+#contact ul {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+#contact li {
+  padding: 5px;
+  color: #6A626C;
+}
